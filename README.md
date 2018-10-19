@@ -1,7 +1,9 @@
 # Resource-Allocation-by-Diversity
 
 Author Yuri Lavinas - University of Tsukuba
+
 Co-Author Claus Aranha - University of Tsukuba
+
 Co-Author Tetsuya Sakurai - University of Tsukuba
 
 Working title: Resource-Allocation-by-Diversity
@@ -20,10 +22,15 @@ Topic of Study: Multiobjective problems - benchmark functions
 4. Most of the background needed to understand this study are:
 
   1. what are multiobjective problems and why are they important
+  
   2. how are the addressed, show evolutionary algorithms that are used for MOP
+  
   3. place MOEA/D among them
+  
   4. describe MOEA/D variants that deal with resource allocation
+  
   5. describe their limits
+  
   6. demonstrate why this study is of relevance.
 
 5. Results will be mainly some applications of the proposed method, compared with a traditional version - MOEA/D-DE - and MOEA/D-GRA, another proposal to address resource allocation.
@@ -42,26 +49,41 @@ Topic of Study: Multiobjective problems - benchmark functions
 Outline of the paper
 
 1. Introduction
+  
   1.1 Topic and importance of it
+  
   1.2 related works
+  
   1.3 reseach addressing the problem
 
 2. Methods
+  
   2.1 how to answer the research question
+  
   2.2 why this method
 
 3. Results 
+  
   3.1 Figures
+  
   3.2 Statistical analysis
+  
   3.3 Explanation
 
 4. Discussion
+  
   4.1 impacts
+  
   4.2 advantagens
+  
   4.3 disadvantagens
 
 5. Conclusion
+  
   5.1 main results
+  
   5.2 Wider implications
+  
   5.3 limitations
+  
   5.4 future works
