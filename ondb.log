@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.20)  19 OCT 2018 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.20)  19 OCT 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,25 +342,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-<decomp2.png, id=1, 1246.6575pt x 547.04375pt>
-File: decomp2.png Graphic file (type png)
-<use decomp2.png>
-Package pdftex.def Info: decomp2.png  used on input line 60.
+<img/decomp2.png, id=1, 1246.6575pt x 547.04375pt>
+File: img/decomp2.png Graphic file (type png)
+<use img/decomp2.png>
+Package pdftex.def Info: img/decomp2.png  used on input line 60.
 (pdftex.def)             Requested size: 283.80157pt x 124.53194pt.
 
 Overfull \hbox (31.80157pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-<harder_problems.png, id=3, 1453.43pt x 1053.9375pt>
-File: harder_problems.png Graphic file (type png)
-<use harder_problems.png>
-Package pdftex.def Info: harder_problems.png  used on input line 67.
+<img/harder_problems.png, id=3, 1453.43pt x 1053.9375pt>
+File: img/harder_problems.png Graphic file (type png)
+<use img/harder_problems.png>
+Package pdftex.def Info: img/harder_problems.png  used on input line 67.
 (pdftex.def)             Requested size: 221.87622pt x 160.88203pt.
-<harder_problems2.png, id=4, 1087.06125pt x 433.62pt>
-File: harder_problems2.png Graphic file (type png)
-<use harder_problems2.png>
-Package pdftex.def Info: harder_problems2.png  used on input line 75.
+<img/harder_problems2.png, id=4, 1087.06125pt x 433.62pt>
+File: img/harder_problems2.png Graphic file (type png)
+<use img/harder_problems2.png>
+Package pdftex.def Info: img/harder_problems2.png  used on input line 75.
 (pdftex.def)             Requested size: 273.47937pt x 109.08623pt.
 
 Overfull \hbox (21.47937pt too wide) in paragraph at lines 75--76
@@ -378,16 +378,16 @@ Underfull \hbox (badness 1675) in paragraph at lines 86--87
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./decomp2.png> <./harder_problems.png>]
+ <./img/decomp2.png> <./img/harder_problems.png>]
 Underfull \hbox (badness 2269) in paragraph at lines 108--109
 []\OT1/ptm/m/n/10 To the best of the au-thors knowl-edge most of the
  []
 
-[2 <./harder_problems2.png>]
-<conv_dir.png, id=29, 557.08125pt x 505.89pt>
-File: conv_dir.png Graphic file (type png)
-<use conv_dir.png>
-Package pdftex.def Info: conv_dir.png  used on input line 178.
+[2 <./img/harder_problems2.png>]
+<img/conv_dir.png, id=29, 557.08125pt x 505.89pt>
+File: img/conv_dir.png Graphic file (type png)
+<use img/conv_dir.png>
+Package pdftex.def Info: img/conv_dir.png  used on input line 178.
 (pdftex.def)             Requested size: 242.52063pt x 220.23018pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 255--256
@@ -400,7 +400,7 @@ Underfull \hbox (badness 6078) in paragraph at lines 255--256
  the con-ver-gence
  []
 
-[3 <./conv_dir.png>] (./ondb.bbl
+[3 <./img/conv_dir.png>] (./ondb.bbl
 Underfull \hbox (badness 4229) in paragraph at lines 84--89
 []\OT1/ptm/m/n/8 L. C. Bez-erra, M. L[]opez-Ib[]a[]nez, and T. St[]utzle, ``Com
 -par-ing
@@ -408,8 +408,8 @@ Underfull \hbox (badness 4229) in paragraph at lines 84--89
 
 ) [4] (./ondb.aux) ) 
 Here is how much of TeX's memory you used:
- 3862 strings out of 492649
- 58069 string characters out of 6129622
+ 3863 strings out of 492649
+ 58137 string characters out of 6129622
  135299 words of memory out of 5000000
  7682 multiletter control sequences out of 15000+600000
  40020 words of font info for 84 fonts, out of 8000000 for 9000
