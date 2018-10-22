@@ -46,7 +46,7 @@ Topic of Study: Multiobjective problems - benchmark functions.
 
 Outline of the paper.
 
-1.Introduction.
+1. Introduction.
     
     1. Topic and importance of it.
     
