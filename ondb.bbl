@@ -21,21 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{chugh2017handling}
-T.~Chugh, ``Handling expensive multiobjective optimization problems with
-  evolutionary algorithms,'' \emph{Jyv{\"a}skyl{\"a} studies in computing
-  263.}, 2017.
-
-\bibitem{li2015use}
-H.~Li, M.~Ding, J.~Deng, and Q.~Zhang, ``On the use of random weights in
-  moea/d,'' in \emph{Evolutionary Computation (CEC), 2015 IEEE Congress
-  on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2015, pp. 978--985.
-
-\bibitem{li2017weights}
-M.~Li and X.~Yao, ``What weights work for you? adapting weights for any pareto
-  front shape in decomposition-based evolutionary multi-objective
-  optimisation,'' \emph{arXiv preprint arXiv:1709.02679}, 2017.
-
 \bibitem{miettinen1999nonlinear}
 K.~Miettinen, ``Nonlinear multiobjective optimization, volume 12 of
   international series in operations research and management science,'' 1999.
@@ -86,6 +71,21 @@ L.~C. Bezerra, M.~L{\'o}pez-Ib{\'a}{\~n}ez, and T.~St{\"u}tzle, ``Comparing
   evolutionary algorithms,'' in \emph{International Conference on Evolutionary
   Multi-Criterion Optimization}.\hskip 1em plus 0.5em minus 0.4em\relax
   Springer, 2015, pp. 396--410.
+
+\bibitem{chugh2017handling}
+T.~Chugh, ``Handling expensive multiobjective optimization problems with
+  evolutionary algorithms,'' \emph{Jyv{\"a}skyl{\"a} studies in computing
+  263.}, 2017.
+
+\bibitem{li2015use}
+H.~Li, M.~Ding, J.~Deng, and Q.~Zhang, ``On the use of random weights in
+  moea/d,'' in \emph{Evolutionary Computation (CEC), 2015 IEEE Congress
+  on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2015, pp. 978--985.
+
+\bibitem{li2017weights}
+M.~Li and X.~Yao, ``What weights work for you? adapting weights for any pareto
+  front shape in decomposition-based evolutionary multi-objective
+  optimisation,'' \emph{arXiv preprint arXiv:1709.02679}, 2017.
 
 \bibitem{zhang2009performance}
 Q.~Zhang, W.~Liu, and H.~Li, ``The performance of a new version of moea/d on
@@ -144,11 +144,6 @@ V.~Chankong and Y.~Haimes, ``Multiobjective decision making: Theory and
 S.~O. Hansson, ``Decision theory a brief introduction. department of philosophy
   and the history of technology, royal institute of technology (kth)
   stockholm,'' 2005.
-
-\bibitem{li2016dynamic}
-X.~Li and Y.~Fang, ``Dynamic environmental/economic scheduling for microgrid
-  using improved moea/d-m2m,'' \emph{Mathematical Problems in Engineering},
-  vol. 2016, 2016.
 
 \bibitem{chiang2011moea}
 T.-C. Chiang and Y.-P. Lai, ``Moea/d-ams: Improving moea/d by an adaptive

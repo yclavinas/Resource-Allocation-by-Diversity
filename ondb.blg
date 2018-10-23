@@ -54,45 +54,45 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in deb2002running
 
 Done.
-You've used 36 entries,
+You've used 35 entries,
             4087 wiz_defined-function locations,
-            1017 strings with 14197 characters,
-and the built_in function-call counts, 26932 in all, are:
-= -- 2209
-> -- 605
-< -- 241
-+ -- 330
-- -- 98
-* -- 1277
-:= -- 4060
-add.period$ -- 82
-call.type$ -- 36
-change.case$ -- 36
+            1012 strings with 14036 characters,
+and the built_in function-call counts, 26492 in all, are:
+= -- 2171
+> -- 596
+< -- 240
++ -- 326
+- -- 96
+* -- 1257
+:= -- 3979
+add.period$ -- 80
+call.type$ -- 35
+change.case$ -- 35
 chr.to.int$ -- 552
-cite$ -- 37
-duplicate$ -- 1937
-empty$ -- 2149
-format.name$ -- 127
-if$ -- 6274
+cite$ -- 36
+duplicate$ -- 1898
+empty$ -- 2111
+format.name$ -- 124
+if$ -- 6176
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 322
-newline$ -- 131
-num.names$ -- 36
-pop$ -- 727
+int.to.str$ -- 35
+missing$ -- 315
+newline$ -- 128
+num.names$ -- 35
+pop$ -- 711
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2087
+skip$ -- 2051
 stack$ -- 0
-substring$ -- 1322
-swap$ -- 1580
-text.length$ -- 57
+substring$ -- 1321
+swap$ -- 1556
+text.length$ -- 56
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 36
+type$ -- 35
 warning$ -- 1
-while$ -- 136
-width$ -- 38
-write$ -- 365
+while$ -- 135
+width$ -- 37
+write$ -- 356
 (There were 10 error messages)

@@ -1,0 +1,49 @@
+\section{Related Works}
+
+\subsection{Utility functions}
+
+
+Utility functions are one way of defining priorities~\cite{chankong1983multiobjective},\cite{hansson2005decision},  and may be used as one way of deciding computational resources distributions among subproblems by guiding the distribution over generations~\cite{cai2015external}. 
+
+
+To the best of the authors knowledge most of the works related to utility functions and resource allocation are: MOEA/D-DRA~\cite{zhang2009performance}, MOEA/D-GRA~\cite{zhou2016all}, MOEA/D-CRA~\cite{kang2018collaborative}, MOEA/D-AMS~\cite{chiang2011moea}. In these work an utility function, $u$, is used but without a clear justification. 
+
+Zhou and Zhang~\cite{zhou2016all} claim that MOEA/D-GRA may be seen as an extension of MOEA/D-DRA and MOEA/D-AMS. The reason is that in MOEA/D-DRA and in MOEA/D-AMS some unsolved subproblems  are chosen for evolution in each generation according to their utility functions. For both MOEA/D-DRA and MOEA/D-GRA, the utility function, $u = \{u_1, u_2, ..., u_N\}$ for every subproblem $i=1,...,N$, is as defined in the next equation.
+\begin{equation}\label{utility}
+	u_i = \dfrac{\text{old fun val}-\text{new fun val}}{\text{old fun val}},
+\end{equation}
+
+
+supported by the idea that if a subproblem has been improved over the last $\Delta T$ generations (\textit{old function value}), it should have a high probability to be improved over the next few generations. While MOEA/D-CRA is based on a MOEA/D variation with two populations. Their utility function is based on if of an individual from population $A$ is selected to compose the population $B$.
+
+My proposal is to integrate utility function with a diversity metric based on a geometrical interpretation of convergence and diversity to MOEA/D-GRA, given its straightforward implementation and integration with other MOEA/D variants.
+
+%Why use MOEA/D-GRA?
+%
+%\begin{itemize}
+%	\item It was easier to understand the proposal and in general had better results that MOEA/D-DRA~\cite{zhou2016all}.
+%	\item Based on a more common and simpler MOEA/D than the MOEA/D-M2M.
+%	\begin{itemize}
+%		\item It is trivial to alter the variation of MOEA/D used as base.
+%	\end{itemize}
+%\end{itemize}
+
+\subsection{Diversity Metric}
+
+Here, I use MRDL as a way to assess the diversity of solutions in an on-line manner and use a utility function based on the output of this metric to guide resource allocation at each generation. 
+
+The hyper-volume indicator (HV) or the Inverted Generational Distance (IGD)  could be used as the diversity metric. However both of them include information about convergence and diversity in a single metric.
+
+There are mainly two groups metrics, the off-line ones, that calculate the diversity after the execution of the algorithm, and the on-line, that calculate the diversity during the execution of the algorithm. 
+
+\paragraph{Off-line metrics} Chi-square-like deviation~\cite{deb1989genetic}, Spacing method~\cite{scott1995fault}, Uniformly distribution index~\cite{tan2002evolutionary}, Entropy approach~\cite{farhang2002diversity}, Grid diversity metric~\cite{deb2002running}, sparsity measure~\cite{deb2003fast}, and many others. 
+
+They need knowledge of the PF or the ideal vector.
+
+\paragraph{On-line metrics}sigma method~\cite{mostaghim2003strategies}  (PF lies in the positive objective space), 
+entropy of the solutions by using Parzen window density estimation-\cite{tan2008evolutionary} (sensitive to kernel width), maximum relative diversity loss~\cite{gee2015online} (expensive $O(N^2)$, with $N$ being the size of the parent population).
+
+In this work the maximum relative diversity loss was chosen to an online diversity assessment to measure the diversity loss caused by any individual in the population, for future works other metrics could be introduced.
+
+
+
