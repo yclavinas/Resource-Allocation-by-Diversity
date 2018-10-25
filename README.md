@@ -10,7 +10,7 @@ Target Journal: IEEE Transactions on Evolutionary Computation.
 
 Topic of Study: Multiobjective problems - benchmark functions.
 
-1.	The specific objective of this study was to propose a variation of one popular multiobjective problem algorithm, MOEA/D, by the usage of evaluations during its iteractions leading to better approximations sets of the Pareto Front. The purpose of this investigation is to explore the relationship of subproblems and evaluations needed.
+1.	The specific objective of this study was to propose a variation of one popular multiobjective problem algorithm, MOEA/D, by the usage of evaluations during its iteractions leading to better approximations sets of the Pareto Front. The purpose of this investigation is to explore the relationship between subproblems and thier correspoding evaluation.
 
 2.	There are a few already proposed algorithms. A utility function is used to prioritize this usage of evaluations, but it is not clear why this function was proposed and if it has mathematical justification. I want to integrate a diversity metric based on a geometrical perspective as the utility function.
 
@@ -20,7 +20,7 @@ Topic of Study: Multiobjective problems - benchmark functions.
 
     1.	what are multiobjective problems and why are they important.
     
-    2.	how are the addressed, show evolutionary algorithms that are used for MOP.
+    2.	how are they addressed, show evolutionary algorithms that are used for MOP.
     
     3.	place MOEA/D among them.
     
@@ -28,7 +28,7 @@ Topic of Study: Multiobjective problems - benchmark functions.
     
     5.	describe their limits.
 
-6.	demonstrate why this study is of relevance.
+    6.	demonstrate why this study is of relevance.
 
 5.	Results will be some applications of the proposed method, compared with a traditional version - MOEA/D-DE - and MOEA/D-GRA, another proposal to address resource allocation.
 
@@ -52,9 +52,9 @@ Outline of the paper.
     
     2. related works.
     
-    3. research addressing the problem.
+    3. research addressing the problem - giving subproblems different amount of evaluations.
 
-2.	Methods.
+2.	Experimental design.
     
     1. how to answer the research question.
     
