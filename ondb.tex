@@ -1,11 +1,16 @@
 \documentclass{IEEEtran}
+
+%\documentclass{article}
+%\usepackage[a4paper,bindingoffset=0.2in,left=0.5in,right=0.5in,top=0.5in,bottom=0.5in,footskip=.25in]{geometry}
+%\usepackage{setspace}
+%\doublespacing
 \usepackage{graphicx}
-\addcontentsline{toc}{chapter}{Bibliography}
+%\addcontentsline{toc}{chapter}{Bibliography}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
-
+\usepackage{booktabs}
 \begin{document}
 
 
@@ -17,12 +22,15 @@
 
 
 \begin{abstract}
-	
-	Multi-objective Evolutionary Algorithm based on Decomposition decomposes a multi-objective problem into simpler, single-objective subproblems by means of scalarizations. In it, all subproblems are uniformly treated, i.e, there is no priority among them. Each subproblem is related to a area of the theoretical Pareto Front, and it is expected that different areas would be more difficult to find approximations that other areas. Therefore, this may lead to an unbalanced exploration of the search space. In this work the goal is to analyze a prioritizing function based on an on-line diversity metric. hence, we perform an experimental study of the proposed algorithm, with NSGA-2, MOEA/D-DE and MOEA/D-GRA on both benchmark group functions, the WFG and the recently proposed bbob-biobj. The results indicate that XXX.
+	\input{0_abstract.tex}
 \end{abstract}
 
 \input{1_intro.tex}
 \input{2_stateoftheart.tex}
 \input{3_method.tex}
+\input{4_experimentaldesign.tex}
+\input{5_results.tex}
+\bibliographystyle{IEEEtran}
+\bibliography{sample}
 
 \end{document}

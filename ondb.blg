@@ -24,10 +24,6 @@ Repeated entry---line 301 of file sample.bib
  : @article{cai2015external
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 389 of file sample.bib
- : @article{chugh2017handling
- :                           ,
-I'm skipping whatever remains of this entry
 Repeated entry---line 398 of file sample.bib
  : @article{zhou2016all
  :                     ,
@@ -48,6 +44,10 @@ Repeated entry---line 760 of file sample.bib
  : @inproceedings{zhang2009performance
  :                                    ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 805 of file sample.bib
+ : @inproceedings{zitzler1998multiobjective
+ :                                         ,
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -56,43 +56,43 @@ Warning--empty journal in deb2002running
 Done.
 You've used 35 entries,
             4087 wiz_defined-function locations,
-            1012 strings with 14036 characters,
-and the built_in function-call counts, 26492 in all, are:
-= -- 2171
-> -- 596
-< -- 240
-+ -- 326
-- -- 96
-* -- 1257
-:= -- 3979
-add.period$ -- 80
+            1015 strings with 13977 characters,
+and the built_in function-call counts, 27013 in all, are:
+= -- 2229
+> -- 611
+< -- 251
++ -- 334
+- -- 98
+* -- 1291
+:= -- 4056
+add.period$ -- 79
 call.type$ -- 35
 change.case$ -- 35
-chr.to.int$ -- 552
+chr.to.int$ -- 570
 cite$ -- 36
-duplicate$ -- 1898
-empty$ -- 2111
-format.name$ -- 124
-if$ -- 6176
+duplicate$ -- 1926
+empty$ -- 2116
+format.name$ -- 127
+if$ -- 6293
 int.to.chr$ -- 0
 int.to.str$ -- 35
-missing$ -- 315
+missing$ -- 320
 newline$ -- 128
 num.names$ -- 35
-pop$ -- 711
+pop$ -- 708
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2051
+skip$ -- 2093
 stack$ -- 0
-substring$ -- 1321
-swap$ -- 1556
-text.length$ -- 56
+substring$ -- 1363
+swap$ -- 1602
+text.length$ -- 61
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 35
 warning$ -- 1
-while$ -- 135
+while$ -- 139
 width$ -- 37
-write$ -- 356
+write$ -- 361
 (There were 10 error messages)

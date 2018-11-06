@@ -1,6 +1,6 @@
 \section{Proposed Method}
 
-MOEA/D with on-line Resource Allocation by Diversity metric, MOEA/D-RAD, is a variant of MOEA/D that used a diversity metric as a way to select values for the utility function. Besides having a utility function based on a diversity metric, the algorithm is the same as MOEA/D-DE~\cite{li2009multiobjective}.
+MOEA/D-RAD, MOEA/D with on-line Resource Allocation by Diversity Metric, is the variant of MOEA/D proposed in this work. This algorithm uses the maximum relative diversity loss, MRDL, for determining the values of the utility function. 
 
 \begin{algorithm}[h]
 	\caption{MOEA/D-RAD}\label{alg1}
@@ -15,58 +15,55 @@ MOEA/D with on-line Resource Allocation by Diversity metric, MOEA/D-RAD, is a va
 				\State Update the population by $y$.
 			\EndIf
 	\EndFor
-	\State Update \textit{\textbf{u}} using a diversity metric.\Comment{Introduced here.}
+	\State Update \textit{\textbf{u}} by a diversity metric after $\Delta T$ generations.
 		\EndWhile
 	\end{algorithmic}
 \end{algorithm}
 
 
-The algorithm~\ref{alg1} describe MOEA/D-RAD. Except from line 4 and 7, the whole procedure in algorithm~\ref{alg1} is as in MOEA/D-DE. Likewise, all reproduction procedures are the same as in MOEA/D-DE~\cite{li2009multiobjective}. We initialize the value of the vector $u=0.5$ as in~\cite{zhou2016all}. A sensitivity analyzes need to be performed for deciding suitable values for $u$.
+The algorithm~\ref{alg1} describe MOEA/D-RAD. Except from line 4, in which a subproblem may not be part of the group that is going to be iterated and from line 7, in which the utility function is calculated, the whole procedure is similar to the MOEA/D-DE~\cite{zhang2009performance}. Likewise, all reproduction procedures and parameters are the same as in MOEA/D-DE~\cite{li2009multiobjective}. It is important to highlight that the neighborhood is only calculated in the initialization period.
 
-\subsection{Maximum Relative Diversity Loss (MRDL)} 
+%The update procedure is described The algorithm~\ref{alg2}, as in MOEA/D-GRA~\cite{zhou2016all}.
+The decomposition method used is the Simple-Lattice Design (SLD), the scalar aggregation function Weighted Sum (WS), the Restricted update strategy.
 
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=0.47\textwidth]{img/conv_dir}
-	\caption{Estimated convergence directions over 500 generations in CEC-09 UF1 benchmark test problem.Figure from~\cite{gee2015online}}
-	\label{fig4}
-\end{figure}
+We initialize the value of the vector $u=1$, as in MOEA/D-DRA. As in MOEA/D-DRA and GRA we have a learning period, $\Delta T$ generations (\textit{old function value}). Here, the $\Delta T=20$.   A sensitivity analyzes need to be performed for deciding suitable initial values for $u$ for $\Delta T$.
 
-Maximum relative diversity loss (MRDL) is used to estimate the diversity loss of a solution to the whole population~\cite{gee2015online}.
+\subsection{Utility Function by Diversity} 
 
- Some properties and implications of the MRDL:
-\begin{itemize}
-	\item If a new offspring generated is identical to any offspring solution in the convergence archive, $\Gamma^{p \rightarrow c}$  will be infinite.
-	\item High values of $\Gamma^{p \rightarrow c}$ indicates the existence of similar offspring solution in the convergence archive or the offspring solution is close to the line of estimated convergence direction. 
-\end{itemize}
+%\begin{figure}[!t]
+%	\centering
+%	\includegraphics[width=0.47\textwidth]{img/conv_dir}
+%	\caption{Estimated convergence directions over 500 generations in CEC-09 UF1 benchmark test problem.Figure from~\cite{gee2015online}}
+%	\label{fig4}
+%\end{figure}
 
-The idea of the MRDL is to use the space movement (convergence directions) of a solution on the objective space towards the PF, as can be seen in Figure~\ref{fig4}, to calculate the diversity of the population. The further a objective vector of a solution is from the convergence direction, more it contributes for the diversity of the approximated PF.
+The utility function proposed in this work is based on the Maximum Relative Diversity Loss MRDL. Prior to scalarizing it between $0$ and $1$ to fit the algorithm~\ref{alg1} we calculate MRDL for every individual of the population. The following function describes how to calculate the utility function given the MRDL, $\Gamma^{p \rightarrow c}$, as follows.
+
+\begin{equation}
+u_i = \Gamma^{p \rightarrow c}_i -  \Gamma^{p \rightarrow c}_j, \text{with  $i=1,...,N$.}
+\end{equation}
+
+%For the purpose of defining the utility function used in this work, we need to define the MRDL.
+
+MRDL is an online diversity metric that estimates the diversity loss of a solution to the whole population~\cite{gee2015online}. First, it is an useful metric since if a new offspring generated is identical to any offspring solution in the convergence archive, the metric value will be infinite. Second, high values of  indicates the existence of similar offspring solution in the convergence archive or the offspring solution is close to the line of estimated convergence direction. Finally, it may be used as an adaptive technique to adjust parameters, as applied in its original study~\cite{gee2015online}.
+
+The idea of the MRDL is to use the space movement (convergence directions) of a solution on the objective space towards the PF. The further an objective vector of a solution is from the convergence direction, more it contributes for the diversity of the approximated PF.
 
 %This is done since the convergence direction is perpendicular to the diverse direction. Here we use the definition of convergence as solutions approaching to the POF in the objective space for the first, while for diversity as the spreading and distribution of solutions along the PF~\cite{gee2015online}.
 
-
-The main idea of calculating Maximum Relative Diversity Loss MRDL, $\Gamma^{p \rightarrow c}$, is to use it as a utility function as follows.
-
-\begin{equation}
-u_i = \Gamma^{p \rightarrow c}_i \text{ , with  $i=1,...,N$.}
-\end{equation}
-
-\begin{equation}
-u_i = (u_i - min(u_i)) / (max(u_i) - min(u_i))
-\end{equation}
-
-\paragraph{MRDL} To calculate the MRDL, we need to compute $k$ convergence directions at every generation and then estimate the Relative Diversity Loss (RDL) for each of these $k$ convergence directions. Therefore, to estimate the diversity loss of a solution to the whole population by:
+To compute the MRDL, we need to estimate $k$ convergence directions at every generation. Then we need to  approximate the Relative Diversity Loss (RDL) for each of these $k$ convergence directions. To calculate this estimative of diversity loss of a solution to the whole population, the following equation is used, considering every incumbent solution related to a subproblem $i$, from the whole population.
  
-For every incumbent solution related to a subproblem $i$, from the whole population.
 
 \begin{equation}
-\Gamma_{i}^{p \rightarrow c} = \underset{i=1,...,k}{\max} \Gamma_{d.conv_{y}}^{p \rightarrow c}
+\Gamma_{i}^{p \rightarrow c} = \underset{i=1,...,k}{\max} \Gamma_{d.conv_{y}}^{p \rightarrow c},
 \end{equation}
 
 
-\paragraph{RDL.} RDL is a diversity measurement quantity that indicates the amount of diversity loss of an individual solution between two consecutive generations. High values of RDL imply a reduction of the solution spread and this equation may indicated the amount of diversity loss.
 
-This quantity is given by a division between the shortest distance of a parent and offspring to the line of convergence direction.
+
+RDL is a diversity measurement quantity that indicates the amount of diversity loss of an individual solution between two consecutive generations. High values of RDL imply a reduction of the solution spread and this equation may indicated the amount of diversity loss.
+
+This quantity is given by a division between the shortest distance of a parent, $p$,  and offspring, $c$, to the line of convergence direction.
 
 \begin{equation}
 \label{rdl}
@@ -79,18 +76,18 @@ with $p\prime$ and $c\prime $ given by:
 
 \begin{equation}
 \begin{split}
-p\prime = p - p_r\\
-c\prime = c - c_s\\
+p\prime = p - p_r,\\
+c\prime = c - c_s,\\
 \end{split}
 \end{equation}
 %verify this
 
-with $p_r$ and $c_s$ being the parent and offspring objective vectors used to calculate the convergence direction in equation~\ref{1}. That is the index $s$ is equal to the index $j$ used to calculate $conv_{y}$. The same principle is valid for the index $h$.
+with $p_r$ and $c_s$ being the parent and offspring objective vectors used to calculate the convergence direction in equation~\ref{1}. That is the index $s$ is equal to the index $j$ used to calculate $conv_{y}$. The same principle is valid for the index $r$.
  
-The vector projection between two vectors $a$ and $b$ that I used is defined as follows.
+The vector projection between two vectors is defined as next.
 
 \begin{equation}
-proj_{d.conv_{y}}p \prime = \frac {{d.conv_{y}} \cdot {p \prime}} {|{p \prime}|^2}{{p \prime}} 
+proj_{d.conv_{y}}p \prime = \frac {{d.conv_{y}} \cdot {p \prime}} {|{p \prime}|^2}{{p \prime}}.
 \end{equation}
 
 While the norm of $p \prime - proj_{d.conv_{y}}p \prime$ is calculated as follows.
@@ -100,11 +97,10 @@ While the norm of $p \prime - proj_{d.conv_{y}}p \prime$ is calculated as follow
 ||p \prime - proj_{d.conv_{y}}p \prime|| = sqrt(crossprod(proj_{d.conv_{y}}p \prime))
 \end{equation}
 
-The norm of $c \prime - proj_{d.conv_{y}}c \prime$ is calculated similarly.
+and the norm of $c \prime - proj_{d.conv_{y}}c \prime$ is calculated similarly.
 
 
-
-\paragraph{Estimating convergence direction given weak-dominance relationship.}To estimate the convergence direction, $d.conv_{y}$, we need to have a offspring, $c_j$, that dominates a parent. Select a parent, $p_h$, solution that is closest to this offspring in the objective space. 
+To estimate the convergence direction, $d.conv_{y}$, we need to have a offspring, $c_j$, that dominates a parent. Select a parent, $p_h$, solution that is closest to this offspring in the objective space. 
 
 For every weakly dominated parent, one convergence direction is calculated as in the next equation.
 \begin{equation}
@@ -112,12 +108,12 @@ For every weakly dominated parent, one convergence direction is calculated as in
 	d.conv_{y} = c_j - p_h
 \end{equation}
 
-The index $j$ (for indexing offsprings, $c_j$) is selected from the set $D_c$.
+The index $j$ (for indexing offsprings, $c_j$) is selected from the set $D_c$. The index $h$ is explained later.
 
 \begin{equation}
 \label{D}
 	D_c = \{d| \exists c_d \prec p_k, k \in {1,..., N}, d \in [1,..., |C|]\}
-\end{equation}
+z\end{equation}
 
 $N$ is the parent population size, $|C|$ is the size of the offspring population $C$. In equation~\ref{D}, the offspring $c_d$ must weakly dominate at least one parent solution. 
 
@@ -143,7 +139,5 @@ $D_p$ in equation~\ref{D_p} denotes the index set of parent solutions which are 
 
 
 
-\bibliographystyle{IEEEtran}
-\bibliography{sample}
 
 

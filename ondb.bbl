@@ -65,45 +65,6 @@ A.~Trivedi, D.~Srinivasan, K.~Sanyal, and A.~Ghosh, ``A survey of
   Transactions on Evolutionary Computation}, vol.~21, no.~3, pp. 440--462,
   2017.
 
-\bibitem{bezerra2015comparing}
-L.~C. Bezerra, M.~L{\'o}pez-Ib{\'a}{\~n}ez, and T.~St{\"u}tzle, ``Comparing
-  decomposition-based and automatically component-wise designed multi-objective
-  evolutionary algorithms,'' in \emph{International Conference on Evolutionary
-  Multi-Criterion Optimization}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Springer, 2015, pp. 396--410.
-
-\bibitem{chugh2017handling}
-T.~Chugh, ``Handling expensive multiobjective optimization problems with
-  evolutionary algorithms,'' \emph{Jyv{\"a}skyl{\"a} studies in computing
-  263.}, 2017.
-
-\bibitem{li2015use}
-H.~Li, M.~Ding, J.~Deng, and Q.~Zhang, ``On the use of random weights in
-  moea/d,'' in \emph{Evolutionary Computation (CEC), 2015 IEEE Congress
-  on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2015, pp. 978--985.
-
-\bibitem{li2017weights}
-M.~Li and X.~Yao, ``What weights work for you? adapting weights for any pareto
-  front shape in decomposition-based evolutionary multi-objective
-  optimisation,'' \emph{arXiv preprint arXiv:1709.02679}, 2017.
-
-\bibitem{zhang2009performance}
-Q.~Zhang, W.~Liu, and H.~Li, ``The performance of a new version of moea/d on
-  cec09 unconstrained mop test instances,'' in \emph{Evolutionary Computation,
-  2009. CEC'09. IEEE Congress on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2009, pp. 203--208.
-
-\bibitem{zhou2016all}
-A.~Zhou and Q.~Zhang, ``Are all the subproblems equally important? resource
-  allocation in decomposition-based multiobjective evolutionary algorithms,''
-  \emph{IEEE Transactions on Evolutionary Computation}, vol.~20, no.~1, pp.
-  52--64, 2016.
-
-\bibitem{kang2018collaborative}
-Q.~Kang, X.~Song, M.~Zhou, and L.~Li, ``A collaborative resource allocation
-  strategy for decomposition-based multiobjective evolutionary algorithms,''
-  \emph{IEEE Transactions on Systems, Man, and Cybernetics: Systems}, 2018.
-
 \bibitem{hinterding1997adaptation}
 R.~Hinterding, Z.~Michalewicz, and A.~E. Eiben, ``Adaptation in evolutionary
   computation: A survey,'' in \emph{Evolutionary Computation, 1997., IEEE
@@ -119,6 +80,12 @@ K.~De~Jong, ``Parameter setting in eas: a 30 year perspective,'' in
 S.~Meyer-Nieberg and H.-G. Beyer, ``Self-adaptation in evolutionary
   algorithms,'' in \emph{Parameter setting in evolutionary algorithms}.\hskip
   1em plus 0.5em minus 0.4em\relax Springer, 2007, pp. 47--75.
+
+\bibitem{zhang2009performance}
+Q.~Zhang, W.~Liu, and H.~Li, ``The performance of a new version of moea/d on
+  cec09 unconstrained mop test instances,'' in \emph{Evolutionary Computation,
+  2009. CEC'09. IEEE Congress on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2009, pp. 203--208.
 
 \bibitem{kramer2010evolutionary}
 O.~Kramer, ``Evolutionary self-adaptation: a survey of operators and strategy
@@ -136,6 +103,23 @@ X.~Cai, Y.~Li, Z.~Fan, and Q.~Zhang, ``An external archive guided
   combinatorial optimization,'' \emph{IEEE Transactions on Evolutionary
   Computation}, vol.~19, no.~4, pp. 508--523, 2015.
 
+\bibitem{zhou2016all}
+A.~Zhou and Q.~Zhang, ``Are all the subproblems equally important? resource
+  allocation in decomposition-based multiobjective evolutionary algorithms,''
+  \emph{IEEE Transactions on Evolutionary Computation}, vol.~20, no.~1, pp.
+  52--64, 2016.
+
+\bibitem{kang2018collaborative}
+Q.~Kang, X.~Song, M.~Zhou, and L.~Li, ``A collaborative resource allocation
+  strategy for decomposition-based multiobjective evolutionary algorithms,''
+  \emph{IEEE Transactions on Systems, Man, and Cybernetics: Systems}, 2018.
+
+\bibitem{gee2015online}
+S.~B. Gee, K.~C. Tan, V.~A. Shim, and N.~R. Pal, ``Online diversity assessment
+  in evolutionary multiobjective optimization: A geometrical perspective,''
+  \emph{IEEE Transactions on Evolutionary Computation}, vol.~19, no.~4, pp.
+  542--559, 2015.
+
 \bibitem{chankong1983multiobjective}
 V.~Chankong and Y.~Haimes, ``Multiobjective decision making: Theory and
   methodology north holland,'' \emph{New York}, 1983.
@@ -150,6 +134,23 @@ T.-C. Chiang and Y.-P. Lai, ``Moea/d-ams: Improving moea/d by an adaptive
   mating selection mechanism,'' in \emph{Evolutionary Computation (CEC), 2011
   IEEE Congress on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2011, pp.
   1473--1480.
+
+\bibitem{liu2014decomposition}
+H.-L. Liu, F.~Gu, and Q.~Zhang, ``Decomposition of a multiobjective
+  optimization problem into a number of simple multiobjective subproblems.''
+  \emph{IEEE Trans. Evolutionary Computation}, vol.~18, no.~3, pp. 450--455,
+  2014.
+
+\bibitem{zitzler1998multiobjective}
+E.~Zitzler and L.~Thiele, ``Multiobjective optimization using evolutionary
+  algorithms—a comparative case study,'' in \emph{International conference on
+  parallel problem solving from nature}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 1998, pp. 292--301.
+
+\bibitem{zhang2008rm}
+Q.~Zhang, A.~Zhou, and Y.~Jin, ``Rm-meda: A regularity model-based
+  multiobjective estimation of distribution algorithm,'' \emph{IEEE
+  Transactions on Evolutionary Computation}, vol.~12, no.~1, pp. 41--63, 2008.
 
 \bibitem{deb1989genetic}
 K.~Deb, ``Genetic algorithms in multimodal function optimization,'' Ph.D.
@@ -192,16 +193,15 @@ K.~C. Tan, C.~K. Goh, A.~Mamun, and E.~Ei, ``An evolutionary artificial immune
   system for multi-objective optimization,'' \emph{European Journal of
   Operational Research}, vol. 187, no.~2, pp. 371--392, 2008.
 
-\bibitem{gee2015online}
-S.~B. Gee, K.~C. Tan, V.~A. Shim, and N.~R. Pal, ``Online diversity assessment
-  in evolutionary multiobjective optimization: A geometrical perspective,''
-  \emph{IEEE Transactions on Evolutionary Computation}, vol.~19, no.~4, pp.
-  542--559, 2015.
-
 \bibitem{zitzler2003performance}
 E.~Zitzler, L.~Thiele, M.~Laumanns, C.~M. Fonseca, and V.~G. Da~Fonseca,
   ``Performance assessment of multiobjective optimizers: An analysis and
   review,'' \emph{IEEE Transactions on evolutionary computation}, vol.~7,
   no.~2, pp. 117--132, 2003.
+
+\bibitem{tusar2016coco}
+T.~Tusar, D.~Brockhoff, N.~Hansen, and A.~Auger, ``Coco: the bi-objective black
+  box optimization benchmarking (bbob-biobj) test suite,'' \emph{arXiv preprint
+  arXiv:1604.00359}, 2016.
 
 \end{thebibliography}

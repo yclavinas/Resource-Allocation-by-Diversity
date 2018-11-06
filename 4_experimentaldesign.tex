@@ -1,0 +1,31 @@
+\section{Experimental Design}
+
+\begin{table}[!t]
+	\centering
+\begin{tabular}{@{}|l|l|@{}}
+		\toprule
+		\textbf{Parameters}   & \textbf{Values}          \\ \midrule
+		Initial value $u$     & 0.5, for every subproblem \\ 
+		Population size       & 150                      \\
+		Neighborhood size T & 20 \\ 
+		$\delta_p$ & 0.9 \\ 
+		$\phi$ & 0.5 \\ 
+		$\eta_m$ & 20 \\
+		$p_m$ & 0.03333333 \\
+		$n_r$ & 2 \\
+		\midrule
+		Number of evaluations & 60000 		\\		
+		Number of repetitions & 21                  \\ \bottomrule
+
+	\end{tabular}
+\vspace{1em}
+\caption{Parameter settings.}
+\end{table}
+
+
+
+This section introduces our experimental design. The question that we want to answer is how the proposed algorithm, MOEA/D-RAD, performs when compared with MOEA/D-DE and MOEA/D-GRA. This comparison is conducted by applying these three algorithms to the Black-Box Optimization Bi-Objective Benchmark (bbob-biobj) test suite~\cite{tusar2016coco}.
+
+To assess these comparisons, we use the hypervolume (HV) metric for measuring the quality of a set of obtained nondominated solutions found by the algorithms. Before calculating the HV value, the objective function was scaled using the ideal point and the nadir point of the all approximated PF of all algorithms, given a repetition. The reference point for the HV calculation was set to $(1, 1)$. Higher values of the HV indicate better approximations.
+
+In order to verify any statistical difference in the average performance given the different algorithms, the pairwise Wilcoxon nonparametric statistical test were used, with confidence interval $\alpha = 0.05$. 
